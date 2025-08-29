@@ -10,25 +10,23 @@ body {
     margin: 5px;
 }
 
-.row::after {
-    clear: both;
-    content: "";
-    display: table;
+.row {
+    display: flex;
+    align-items: stretch;
 }
 
 .column {
-    float: left;
     background-color: #aaa;
     text-align: center;
+    margin: 5px;
     font-size: 30px;
     height: 1000px;
-    border: #fff solid 5px;
 }
 
 .column.middle {
-    width: 60%;
+    flex-grow: 5;
 }
 
 .column.outer {
-    width: 20%;
+    flex-grow: 1;
 }

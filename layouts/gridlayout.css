@@ -6,29 +6,20 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    margin: 5px;
-}
-
-.row::after {
-    clear: both;
-    content: "";
-    display: table;
+.row {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
 }
 
 .column {
-    float: left;
     background-color: #aaa;
     text-align: center;
     font-size: 30px;
     height: 1000px;
-    border: #fff solid 5px;
 }
 
 .column.middle {
-    width: 60%;
-}
-
-.column.outer {
-    width: 20%;
+    grid-column-start: 2;
+    grid-column-end: 5;
 }
